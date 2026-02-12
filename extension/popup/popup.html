@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabFlow</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo-mini">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+          <path d="M16 4L28 12V20L16 28L4 20V12L16 4Z" fill="url(#gradient)" stroke="#fff" stroke-width="2"/>
+          <defs>
+            <linearGradient id="gradient" x1="4" y1="4" x2="28" y2="28">
+              <stop offset="0%" stop-color="#667eea"/>
+              <stop offset="100%" stop-color="#764ba2"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>TabFlow</span>
+      </div>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-info">
+          <div class="stat-value" id="activeCount">0</div>
+          <div class="stat-label">Active</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-info">
+          <div class="stat-value" id="completedCount">0</div>
+          <div class="stat-label">Today</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-info">
+          <div class="stat-value" id="streakCount">0</div>
+          <div class="stat-label">Streak</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <button class="action-btn" id="newIntentBtn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>New Intent</span>
+      </button>
+      <button class="action-btn" id="dashboardBtn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M3 3h6v6H3zM11 3h6v6h-6zM3 11h6v6H3zM11 11h6v6h-6z"/>
+        </svg>
+        <span>Dashboard</span>
+      </button>
+    </div>
+
+    <div class="recent-intents" id="recentIntents">
+      <div class="section-title">Recent Intents</div>
+      <div id="intentsList" class="intents-list"></div>
+    </div>
+
+    <footer class="popup-footer">
+      <button class="footer-btn" id="settingsBtn">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
+        </svg>
+        Settings
+      </button>
+      <button class="footer-btn" id="upgradeBtn">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M10 2l8 8-8 8V2z" fill="url(#gradient2)"/>
+          <defs>
+            <linearGradient id="gradient2" x1="2" y1="2" x2="18" y2="18">
+              <stop offset="0%" stop-color="#667eea"/>
+              <stop offset="100%" stop-color="#764ba2"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        Upgrade Pro
+      </button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
