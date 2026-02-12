@@ -203,4 +203,10 @@ If you find TabFlow useful, please star this repository!
 
 ---
 
+## 🚀 Deployment Status
+
+Deployed on Vercel with Supabase PostgreSQL backend.
+
+---
+
 **Built with ❤️ by [Hasnain Akber](https://github.com/hasnainakber9)**
