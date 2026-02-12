@@ -1,4 +1,4 @@
-import { connectDB } from '../../../lib/mongodb';
+import { connectDB } from '../../../li/supabase';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
 
     // Generate JWT
     const token = jwt.sign(
-      { userId: user._id, email: user.email },
+      { userId: user.id, email: user.email },
       process.env.JWT_SECRET || 'your-secret-key',
       { expiresIn: '30d' }
     );
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     res.status(200).json({
       success: true,
       user: {
-        id: user._id,
+        id: user.id,
         email: user.email,
         name: user.name,
         plan: user.plan
