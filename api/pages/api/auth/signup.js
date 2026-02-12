@@ -1,4 +1,4 @@
-import { connectDB } from '../../../lib/mongodb';
+import { connectDB } from '../../../li/supabase';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       email,
       password: hashedPassword,
       name: name || email.split('@')[0],
-      createdAt: new Date(),
+      
       plan: 'free',
       settings: {
         autoGroupTabs: true,
