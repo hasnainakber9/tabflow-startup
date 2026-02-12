@@ -49,3 +49,4 @@ coverage/
 # Next.js
 .next/
 out/
+# Trigger deployment
